@@ -1,0 +1,2826 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <!-- Start: custom stylesheets -->
+        <link rel="stylesheet" href="../../dist/fe/css/main.css">
+        <!-- End:/ custom stylesheets -->
+
+        <!-- Start: vendor stylesheets -->
+        <link rel="stylesheet" href="../../dist/fe/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="../../dist/fe/vendor/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../../dist/fe/vendor/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+        <!-- End:/ vendor stylesheets -->
+    </head>
+    <body>
+        <div class="pt-tabl">
+            <table id="flight" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                    <div class="header-tabl">
+                        <div class="header-tabl__left">
+                            <div class="icons">
+                                <i class="fas fa-plane-arrival"></i>
+                            </div>
+                            <div class="texts">
+                                <h2 class="font-weight-bold">Arrivals</h2>
+                                <h2 class="font-italic">Kedatangan</h2>
+                                <h2 class="font-weight-normal">Terminal 2</h2>
+                            </div>
+                        </div>
+                        <div class="header-tabl__right">
+                            <div class="bx">
+                                <div id="timesFlight" onload="timesFlightInfo()"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <tr id="head_table">
+                        <th>
+                            <div id="lang1">
+                                PENERBANGAN
+                            </div>
+                            <div id="lang2">
+                                FLIGHT
+                            </div>
+                        </th>
+                        <th width="100">
+                            <div id="lang1">
+                                WAKTU
+                            </div>
+                            <div id="lang2">
+                                TIME
+                            </div>
+                        </th>
+                        <th>
+                            <div id="lang1">
+                                TUJUAN
+                            </div>
+                            <div id="lang2">
+                                DESTINATION
+                            </div>
+                        </th>
+                        <th width="100">
+                            <div id="lang1">
+                                PINTU
+                            </div>
+                            <div id="lang2">
+                                GATE
+                            </div>
+                        </th>
+                        <th>
+                            <div id="lang1">
+                                STATUS
+                            </div>
+                            <div id="lang2">
+                                REMARKS
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="body_table">
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg')"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 098</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg')"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 099</section>
+                            </section>
+                        </td> 
+                        <td>
+                            10:20
+                        </td>
+                        <td>
+                            MAKASSAR
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg')"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 097</section>
+                            </section>
+                        </td> 
+                        <td>
+                            07:50
+                        </td>
+                        <td>
+                            JAKARTA
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="dates-line">
+                        <td colspan="5">
+                            <div id="lang1" class="text-center">
+                                Wednesday, 04 December 2019
+                            </div>
+                            <div id="lang2" class="text-center">
+                                Wednesday, 04 December 2019
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg')"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 091</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            SURABAYA
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 672</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            YOGYAKARTA
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 871</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="dates-line">
+                        <td colspan="5">
+                            <div id="lang1" class="text-center">
+                                Wednesday, 05 December 2019
+                            </div>
+                            <div id="lang2" class="text-center">
+                                Wednesday, 05 December 2019
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 819</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            PALU
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 176</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MEDAN
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 681</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MALANG
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 710</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 123</section>
+                            </section>
+                        </td> 
+                        <td>
+                            10:20
+                        </td>
+                        <td>
+                            MAKASSAR
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="dates-line">
+                        <td colspan="5">
+                            <div id="lang1" class="text-center">
+                                Wednesday, 07 December 2019
+                            </div>
+                            <div id="lang2" class="text-center">
+                                Wednesday, 07 December 2019
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 413</section>
+                            </section>
+                        </td> 
+                        <td>
+                            07:50
+                        </td>
+                        <td>
+                            JAKARTA
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 091</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            SURABAYA
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 672</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            YOGYAKARTA
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 871</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 819</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 176</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MEDAN
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 681</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MALANG
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 710</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 123</section>
+                            </section>
+                        </td> 
+                        <td>
+                            10:20
+                        </td>
+                        <td>
+                            MAKASSAR
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 413</section>
+                            </section>
+                        </td> 
+                        <td>
+                            07:50
+                        </td>
+                        <td>
+                            JAKARTA
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 091</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            SURABAYA
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 672</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            YOGYAKARTA
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 871</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 819</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            PALU
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 710</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 123</section>
+                            </section>
+                        </td> 
+                        <td>
+                            10:20
+                        </td>
+                        <td>
+                            MAKASSAR
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 413</section>
+                            </section>
+                        </td> 
+                        <td>
+                            07:50
+                        </td>
+                        <td>
+                            JAKARTA
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 091</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            SURABAYA
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 672</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            YOGYAKARTA
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 871</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 819</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            PALU
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 176</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MEDAN
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 681</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MALANG
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 710</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 123</section>
+                            </section>
+                        </td> 
+                        <td>
+                            10:20
+                        </td>
+                        <td>
+                            MAKASSAR
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 413</section>
+                            </section>
+                        </td> 
+                        <td>
+                            07:50
+                        </td>
+                        <td>
+                            JAKARTA
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 091</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            SURABAYA
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 672</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            YOGYAKARTA
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 871</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 819</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 176</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MEDAN
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 681</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MALANG
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 710</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 123</section>
+                            </section>
+                        </td> 
+                        <td>
+                            10:20
+                        </td>
+                        <td>
+                            MAKASSAR
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 413</section>
+                            </section>
+                        </td> 
+                        <td>
+                            07:50
+                        </td>
+                        <td>
+                            JAKARTA
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 091</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            SURABAYA
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 672</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            YOGYAKARTA
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 871</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 819</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            PALU
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg')"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 098</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg')"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 099</section>
+                            </section>
+                        </td> 
+                        <td>
+                            10:20
+                        </td>
+                        <td>
+                            MAKASSAR
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg')"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 097</section>
+                            </section>
+                        </td> 
+                        <td>
+                            07:50
+                        </td>
+                        <td>
+                            JAKARTA
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg')"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 091</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            SURABAYA
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 672</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            YOGYAKARTA
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 871</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 819</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            PALU
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 176</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MEDAN
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 681</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MALANG
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 710</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 123</section>
+                            </section>
+                        </td> 
+                        <td>
+                            10:20
+                        </td>
+                        <td>
+                            MAKASSAR
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 413</section>
+                            </section>
+                        </td> 
+                        <td>
+                            07:50
+                        </td>
+                        <td>
+                            JAKARTA
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 091</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            SURABAYA
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 672</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            YOGYAKARTA
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 871</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 819</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 176</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MEDAN
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 681</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MALANG
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 710</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 123</section>
+                            </section>
+                        </td> 
+                        <td>
+                            10:20
+                        </td>
+                        <td>
+                            MAKASSAR
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 413</section>
+                            </section>
+                        </td> 
+                        <td>
+                            07:50
+                        </td>
+                        <td>
+                            JAKARTA
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 091</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            SURABAYA
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 672</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            YOGYAKARTA
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 871</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 819</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            PALU
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 710</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 123</section>
+                            </section>
+                        </td> 
+                        <td>
+                            10:20
+                        </td>
+                        <td>
+                            MAKASSAR
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 413</section>
+                            </section>
+                        </td> 
+                        <td>
+                            07:50
+                        </td>
+                        <td>
+                            JAKARTA
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 091</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            SURABAYA
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 672</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            YOGYAKARTA
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 871</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 819</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            PALU
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 176</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MEDAN
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 681</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MALANG
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 710</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 123</section>
+                            </section>
+                        </td> 
+                        <td>
+                            10:20
+                        </td>
+                        <td>
+                            MAKASSAR
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 413</section>
+                            </section>
+                        </td> 
+                        <td>
+                            07:50
+                        </td>
+                        <td>
+                            JAKARTA
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 091</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            SURABAYA
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 672</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            YOGYAKARTA
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 871</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 819</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 176</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MEDAN
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 681</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            MALANG
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 710</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 123</section>
+                            </section>
+                        </td> 
+                        <td>
+                            10:20
+                        </td>
+                        <td>
+                            MAKASSAR
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 413</section>
+                            </section>
+                        </td> 
+                        <td>
+                            07:50
+                        </td>
+                        <td>
+                            JAKARTA
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 091</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            SURABAYA
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 672</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            YOGYAKARTA
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                SESUAI JADWAL
+                            </div>
+                            <div id="lang2">
+                                ON SCHEDULE
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 871</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            DENPASAR
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                NAIK PESAWAT
+                            </div>
+                            <div id="lang2">
+                                BOARDING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section class="grid_layouts --flight">
+                                <section class="imgs-fl">
+                                    <section class="imgs_msc" style="background-image: url('../fe/images/maskapai.jpg');"></section>
+                                </section>
+                                <section class="flight-txt-content">GA 819</section>
+                            </section>
+                        </td> 
+                        <td>
+                            13:50
+                        </td>
+                        <td>
+                            PALU
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="lang1">
+                                PANGGILAN TERAKHIR
+                            </div>
+                            <div id="lang2">
+                                LAST CALL
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- Start: vendor js -->
+        <script type="text/javascript" src="../../dist/fe/vendor/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="../../dist/fe/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="../../dist/fe/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <!-- End/: vendor js -->
+
+        <script type="text/javascript" src="../fe/js/main.js"></script>
+    </body>
+</html>

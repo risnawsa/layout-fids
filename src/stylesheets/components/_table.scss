@@ -1,0 +1,162 @@
+// -----------------------------------------------------------------------------
+// This file contains all table styles.
+// -----------------------------------------------------------------------------
+
+.pt-tabl{
+    .header-tabl{
+        display: grid;
+        grid-template-columns: minmax(1px, 0.5fr) minmax(1px, 0.5fr);
+        @media screen and (max-width: 767px) {
+            grid-template-columns: minmax(1px, auto);    
+            grid-gap: 10px;
+            padding: 35px 25px;
+        }
+        grid-gap: 20px;
+        background-image: url('../../../dist/fe/images/bg_Landscape.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 100%;
+        // background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(24,24,179,1) 0%, rgba(0,212,255,1) 100%);
+        padding: 3px 25px;
+        @include e('left'){
+            display: grid;
+            grid-template-columns: minmax(1px, 150px) minmax(1px, auto);
+            @media screen and (max-width: 767px) {
+                grid-template-columns: minmax(1px, auto);
+            }
+            grid-gap: 5px;
+
+            .icons{
+                font-size: 90px;    
+                margin: auto 0;
+                @media screen and (max-width: 767px) {
+                    margin: auto;
+                }
+                i{
+                    color: $white;
+                }
+            }
+            .texts{
+                margin: auto 0;
+                @media screen and (max-width: 767px) {
+                    margin: auto;
+                }
+                h2{
+                    color: $white;    
+                    font-size: 24px;
+                    @media screen and (max-width: 1400px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        @include e('right'){
+            text-align: center;
+            margin: auto;
+            margin-right: 0;
+            @media screen and (max-width: 767px) {
+                margin-right: auto;
+            }
+            .bx{
+                padding: 10px 30px;
+                background-color: $light-primary;
+                border-radius: 10px;
+                div{
+                    color: $black;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .table-striped{
+        tbody{
+            tr{
+                &:nth-of-type(odd) {
+                    background-color: $dark-blue;
+                }
+                &:nth-of-type(even) {
+                    background-color: $light-blue;
+                }
+            }
+        }
+    }
+
+    .dataTables_scrollHeadInner{
+        width: 100% !important;
+    }
+
+    .table{
+        &.dataTable{
+            width: 100% !important; 
+            clear: none !important;
+            border-collapse: collapse !important;
+            margin-top: 0 !important;
+            border-color: transparent !important;
+            &.table-bordered {
+                border: 1px solid transparent;
+            }
+        }
+        thead{
+            tr{
+                border-color: transparent;    
+                background: #6cbee6;
+                th{
+                    border-color: transparent;
+                    border-bottom: unset;
+                    padding: 5px 20px;
+                    padding-inline-start: 12px;
+                }
+            }
+        }
+        tbody{
+            tr{
+                &.dates-line{
+                    background-color: $white !important;
+                    td{
+                        div{
+                            color: $black !important;    
+                            font-weight: 600;
+                        }
+                    }
+                }
+                td{
+                    color: $white;
+                    border-color: transparent;
+                    line-height: 4;
+                    .imgs_msc{
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        padding-top: 50%;
+                    }
+                    .imgs-fl{
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    div{
+                        color: $white;
+                    }
+                    .flight-txt-content{
+                        margin: auto 0;
+                    }
+                }
+                &.odd{
+                    background-color: $dark-blue;
+                }
+                &.even{
+                    background-color: $light-blue;
+                }
+            }
+        }
+    }
+
+    .dataTables_paginate{
+        &.paging_simple_numbers{
+            display: none;
+        }
+    }
+}
+
+

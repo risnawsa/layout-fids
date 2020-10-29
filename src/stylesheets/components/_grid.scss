@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// This file contains all grid styles.
+// -----------------------------------------------------------------------------
+
+.grid_layouts{
+    display: grid;
+    &.--flight{
+        grid-template-columns: minmax(1px, 130px) minmax(1px, auto);  
+        grid-gap: 5px;
+    }
+}

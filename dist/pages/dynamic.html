@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <!-- Start: custom stylesheets -->
+        <link rel="stylesheet" href="../../dist/fe/css/main.css">
+        <!-- End:/ custom stylesheets -->
+
+        <!-- Start: vendor stylesheets -->
+        <link rel="stylesheet" href="../../dist/fe/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="../../dist/fe/vendor/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../../dist/fe/vendor/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+        <!-- End:/ vendor stylesheets -->
+    </head>
+    <body>
+        <div class="grid_layouts tables-gr">
+            <div class="pt-tabl">
+                <table id="flight" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <div class="header-tabl">
+                            <div class="header-tabl__left">
+                                <div class="icons">
+                                    <i class="fas fa-plane-arrival"></i>
+                                </div>
+                                <div class="texts">
+                                    <h2 class="font-weight-bold">Arrivals</h2>
+                                    <h2 class="font-italic">Kedatangan</h2>
+                                    <h2 class="font-weight-normal">Terminal 2</h2>
+                                </div>
+                            </div>
+                            <div class="header-tabl__right">
+                                <div class="bx">
+                                    <div id="datesEng"></div>
+                                    <div id="MyClockDisplayEng" onload="showTime()"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </thead>
+                </table>
+            </div>
+            <div class="pt-tabl">
+                <table id="flights" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <div class="header-tabl">
+                            <div class="header-tabl__left">
+                                <div class="icons">
+                                    <i class="fas fa-plane-departure"></i>
+                                </div>
+                                <div class="texts">
+                                    <h2 class="font-weight-bold">Departures</h2>
+                                    <h2 class="font-italic">Keberangkatan</h2>
+                                    <h2 class="font-weight-normal">Terminal 2</h2>
+                                </div>
+                            </div>
+                            <div class="header-tabl__right">
+                                <div class="bx">
+                                    <div id="datesIna"></div>
+                                    <div id="MyClockDisplayIna" onload="showTime()"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <!-- Start: vendor js -->
+        <script type="text/javascript" src="../../dist/fe/vendor/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="../../dist/fe/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="../../dist/fe/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <!-- End/: vendor js -->
+
+        <script type="text/javascript" src="../fe/js/dynamic.js"></script>
+    </body>
+</html>

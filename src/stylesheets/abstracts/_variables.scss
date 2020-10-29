@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all colors styles.
+// -----------------------------------------------------------------------------
+
+///start : main brand color
+
+//main colors
+$black: #000000;
+$white: #ffffff;
+
+//main background-colors
+$dark-blue: #1818b3;
+$light-blue: #1518f2;
+$light-blufm: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(234,234,235,1) 0%, rgba(0,212,255,1) 100%);
+$light-primary: #c8e4f9;
+
+//main text-colors
+// $light-blue: #e2e8f1;
+
+//main button colors
+
+//footer colors
+
+//shadow bg colors
+
+///end : main brand color
+
+
+// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'lg-dekstop': 1230px,
+  'md-dekstop': 991px,
+
+  'lg-tablet': 767px,
+  'md-tablet': 600px,
+  'sm-tablet': 575px,
+
+  'lg-mobile': 425px,
+  'xs-mobile': 300px,
+) !default;
+
